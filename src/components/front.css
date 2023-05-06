@@ -1,0 +1,145 @@
+body {
+  overflow: auto;
+}
+.hero {
+    background-image: url("./real.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+  }
+  .hero .container {
+    padding-top: 18%;
+    align-items: center;
+    align-content: center;
+  }
+  
+  /* Search box */
+  .search-box {
+    position: absolute;
+    top: 30%; /* change this value to move the search box up or down */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    max-width: 600px;
+    z-index: 1;
+  }
+  
+
+.search-container {
+  display: flex;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 25px 0 0 25px;
+  background-color: #f1f1f1;
+  font-size: 16px;
+  color: #333;
+}
+
+.main1 {
+  position: relative;
+  height: 100vh; /* set the container to full viewport height */
+}
+
+video {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 70px); /* subtract navbar height from container height */
+  object-fit: cover;
+}
+
+button[type="submit"] {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 0 25px 25px 0;
+  background-color: #04aa6d;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #057c4f;
+}
+
+/* Dropdown */
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #f1f1f1;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  z-index: 2; /* set z-index higher than video to display dropdown above it */
+}
+
+.dropdown ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dropdown li {
+  padding: 12px 20px;
+  cursor: pointer;
+}
+
+.dropdown li:hover {
+  background-color: #ddd;
+}
+
+  
+  .hero h1 {
+    color: #ffffff;
+    font-size: 50px;
+  }
+  .hero p {
+    color: #ffffff;
+    opacity: 1;
+    font-size: 18px;
+  }
+  
+  form input {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid rgba(128, 128, 128, 0.2);
+    margin-top: 0;
+    border-radius: 5px;
+  }
+  form span {
+    font-size: 14px;
+    color: grey;
+  }
+  input::placeholder {
+    font-size: 17px;
+    color: black;
+  }
+  form .box {
+    padding: 2px;
+    border-left: 1px solid rgba(128, 128, 128, 0.2);
+  }
+  form .box:nth-child(1) {
+    border-left: none;
+  }
+  form h4 {
+    font-weight: 500;
+  }
+  @media screen and (max-width: 800px) {
+    .hero .container {
+      padding-top: 5%;
+    }
+    form .box {
+      border-left: none;
+    }
+    form input {
+      width: 100%;
+    }
+  }
